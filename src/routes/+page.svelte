@@ -2,6 +2,7 @@
     import ClickCounter from "$lib/components/ClickCounter.svelte"
 
     let count= $state(5);
+    let double = $derived(count * 2);
 </script>
 
 <h1>Welcome to SvelteKit</h1>
@@ -10,6 +11,8 @@
 <button onclick={()=> count++}>
     clicks:{count}
 </button>
+
+<span> doubled is {double} </span>
 
 <ClickCounter bind:initialCount={count} />
 <p>count from parent is {count}</p>
