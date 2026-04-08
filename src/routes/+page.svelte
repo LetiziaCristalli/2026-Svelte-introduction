@@ -1,5 +1,6 @@
 <script>
     import ClickCounter from "$lib/components/ClickCounter.svelte"
+    import CanvasSquare from "$lib/components/CanvasSquare.svelte"
 
     let count= $state(5);
     let double = $derived(count * 2);
@@ -10,10 +11,10 @@
 
 <ClickCounter bind:initialCount={count} />
 <p>count from parent is {count}</p>
+<CanvasSquare />
 
 <style>
     h1  {
         color: deepskyblue;
     }
 </style>
-
